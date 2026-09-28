@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student CRUD</title>
+    <!-- Link to our simple stylesheet -->
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <div class="page">
+        <h1 class="title">Student Management</h1>
+
+        <!-- ---------- Form: used for both Create and Update ---------- -->
+        <div class="card">
+            <h2 class="card-title" id="form-title">Add Student</h2>
+
+            <!-- Hidden field: holds the Id when we are editing an existing student -->
+            <input type="hidden" id="student-id" />
+
+            <div class="form-row">
+                <label class="label" for="first-name">First Name</label>
+                <input class="input" type="text" id="first-name" placeholder="First" />
+            </div>
+
+            <div class="form-row">
+                <label class="label" for="last-name">Last Name</label>
+                <input class="input" type="text" id="last-name" placeholder="Last" />
+            </div>
+
+            <div class="form-row">
+                <label class="label" for="email">Email</label>
+                <input class="input" type="email" id="email" placeholder="ada@example.com" />
+            </div>
+
+            <div class="form-row">
+                <label class="label" for="age">Age</label>
+                <input class="input" type="number" id="age" placeholder="28" min="1" max="120" />
+            </div>
+
+            <!-- A place to show validation or server messages -->
+            <p class="message" id="message"></p>
+
+            <div class="button-row">
+                <button class="button button-primary" id="save-button">Save</button>
+                <button class="button button-secondary" id="cancel-button">Cancel</button>
+            </div>
+        </div>
+
+        <!-- ---------- Table: lists all students ---------- -->
+        <div class="card">
+            <h2 class="card-title">Students</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <!-- Rows are filled in by JavaScript -->
+                <tbody id="student-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Our vanilla JavaScript that calls the API -->
+    <script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* ============================================================
+   Simple stylesheet for the Student CRUD UI.
+   Plain, clearly-named classes. No framework needed.
+   ============================================================ */
+
+/* Reset a few defaults so spacing is predictable */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Centered page container */
+.page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #2c3e50;
+}
+
+/* White boxes that group the form and the table */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #2c3e50;
+}
+
+/* One label + input per row */
+.form-row {
+    margin-bottom: 12px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Message line for feedback (errors in red, success in green) */
+.message {
+    min-height: 20px;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.message-error {
+    color: #c0392b;
+}
+
+.message-success {
+    color: #27ae60;
+}
+
+/* Buttons */
+.button-row {
+    margin-top: 12px;
+}
+
+.button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.button-primary {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.button-primary:hover {
+    background-color: #2980b9;
+}
+
+.button-secondary {
+    background-color: #95a5a6;
+    color: #ffffff;
+}
+
+.button-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.button-edit {
+    background-color: #f39c12;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 13px;
+}
+
+.button-delete {
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 13px;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.table th {
+    background-color: #f0f2f5;
+    color: #2c3e50;
+}
+
+.table tr:hover {
+    background-color: #fafafa;
+}
+
+/* Shown when there are no students */
+.empty-row {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
